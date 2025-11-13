@@ -20,3 +20,10 @@ show_me(faku, 10)
 show_me(faku, 7)
 show_me(faku, -3)
 show_me(faku, 3.5)
+
+# c) und hier in tex
+zu zeigen: \(\sum\limits_{k=1}^{n}(k\cdot k!) = (n+1)!-1\) durch induktion:
+\\
+IA: \(k=1:\sum\limits_{k=1}^{n}(k\cdot k!)=1\cdot1!=1; (n+1)!-1=2!-1=1\), also passt
+\\
+IV: \(\)
