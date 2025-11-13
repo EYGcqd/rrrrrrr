@@ -26,4 +26,21 @@ zu zeigen: \(\sum\limits_{k=1}^{n}(k\cdot k!) = (n+1)!-1\) durch induktion:
 \\
 IA: \(k=1:\sum\limits_{k=1}^{n}(k\cdot k!)=1\cdot1!=1; (n+1)!-1=2!-1=1\), also passt
 \\
-IV: \(\)
+IV: für $n$ gelte \(\sum\limits_{k=1}^{n}(k\cdot k!) = (n+1)!-1\)
+\\
+IB:  daraus soll dann folgen \(\sum\limits_{k=1}^{n+1}(k\cdot k!) = (n+2)!-1\)
+\\
+IS:
+\[\overset{\leadsto}{\text{IV}}\sum\limits_{k=1}^{n}(k\cdot k!) = (n+1)!-1\]
+\[\Leftrightarrow\sum\limits_{k=1}^{n}(k\cdot k!)+(n+1)(n+1)! = (n+1)!-1+(n+1)(n+1)!\]
+\[\Leftrightarrow\sum\limits_{k=1}^{n+1}(k\cdot k!) = (n+1)!-1+(n+1)(n+1)!\]
+weiter mit der rechten Seite
+\\
+\(
+\begin{array}{lcl}
+(n+1)!-1 +(n+1)(n+1)!& = & (-1) + (n+1)!+(n+1)(n+1)!\\
+&=& (-1)+(n+1)!(1+(n+1))
+&=& (-1)+(n+1)!(n+2)
+&=& (-1)+(n+2)!
+\end{array}\Box
+\)
