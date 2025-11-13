@@ -4,7 +4,11 @@ create_zeroes(n) = [0. for x in 1:n]
 x_vals = range(-pi, end=pi, length=100)
 y_vals = [cos(x) for x in x_vals]
 # b)
+scatter(0,0,0, label="0", xlims=(0,100), ylims=(0,100), zlims=(-1, 1))
 ds = create_zeroes(10000)
 for i in 1:100
     for j in 1:100
-        ds[i*j] = 
+        ds[100*(i-1)+j] = abs(y_vals[i] - y_vals[j])
+        scatter!(i, j, ds[100*(i-1)+j])
+    end
+end 
