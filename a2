@@ -1,0 +1,10 @@
+# Aufgabe 2
+# a)
+create_zeroes(n) = [0. for x in 1:n]
+x_vals = range(-pi, end=pi, length=100)
+y_vals = [cos(x) for x in x_vals]
+# b)
+ds = create_zeroes(10000)
+for i in 1:100
+    for j in 1:100
+        ds[i*j] = 
