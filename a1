@@ -1,0 +1,28 @@
+# Aufgabe 1
+create_zeroes(n) = [0. for x in 1:n]
+# a)
+using Plots
+f(x) = sin(x)
+g(x) = cos(x)
+x_vals = range(-pi, end=pi, length=100)
+fy_vals = [f(x) for x in x_vals]
+gy_vals = [g(x) for x in x_vals]
+scatter(x_vals, fy_vals, label="f(x)"]
+scatter!(x_vals, gy_vals, label="g(x)"]
+# b)
+dif(f, x0, x1) = (f(x0) - f(x1))/(x0-x1)
+l = create_zeroes(99)
+for c in 1:99
+    l[c] = dif(f, x_vals[c], x_vals[c+1])
+end
+scatter!(x_vals, l, label="f'(x)")
+# c)
+function line(f, x, e=0.001)
+    a = (f(x)-f(x-e))/e
+    b = f(x) - a*x
+    l(x) = a*x+b
+    return l
+end
+df(x) = line(f, (pi/4))
+scatter(x_vals, fy_vals, label="f(x)")
+plot!(l, label="line")
